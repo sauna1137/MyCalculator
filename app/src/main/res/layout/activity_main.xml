@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
     
     <TextView
+        android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@color/light_grey"
@@ -176,7 +177,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:text="@string/clr"
             />
         <Button
