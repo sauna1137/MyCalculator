@@ -47,6 +47,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun onEqual(view: View) {
+        if (lastNumeric) {
+            var tvValue = tvInput?.text.toString()
+            try {
+                val splitValue = tvValue.split("-")
+                var one = splitValue[0]
+                var two = splitValue[1]
+                var result = one.toDouble() - two.toDouble()
+                tvInput?.text = result.toString()
+
+            } catch (e: java.lang.ArithmeticException) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     private fun isOperatorAdded(value: String): Boolean {
         return if(value.startsWith("-")) {
             false
